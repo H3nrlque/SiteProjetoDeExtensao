@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório | Defesa Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-suave">
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Defesa Digital</div>
+            <ul class="nav-links">
+                <li><a href="index.html">O que é IA?</a></li>
+                <li><a href="ameacas.html">Ameaças e Prevenção</a></li>
+                <li><a href="quiz.html" class="active">Laboratório</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="secao">
+        <div class="container">
+            <h2 class="titulo-secao">O Teste de Turing Visual</h2>
+            
+            
+            <div id="aviso-js" style="background: #9b1d20; color: white; padding: 20px; text-align: center; border-radius: 8px; margin-bottom: 20px; font-weight: bold;">
+                ⚠️ ERRO: O arquivo "script.js" não foi carregado! Verifique se ele está na mesma pasta e se o nome está correto.
+            </div>
+
+            
+            <div id="area-quiz" class="quiz-container oculto">
+                <div id="progresso-quiz" class="progresso-texto">Iniciando...</div>
+                
+                <p style="text-align: center; margin-bottom: 20px;">Analise os detalhes e selecione a imagem que você acredita ser <strong>100% REAL</strong> (Fotografia humana).</p>
+
+                <div class="grid-imagens">
+                    <div class="imagem-opcao" onclick="verificarResposta('A')">
+                        <img id="img-A" src="" alt="Opção A">
+                        <div class="imagem-label">Selecionar Imagem A</div>
+                    </div>
+                    <div class="imagem-opcao" onclick="verificarResposta('B')">
+                        <img id="img-B" src="" alt="Opção B">
+                        <div class="imagem-label">Selecionar Imagem B</div>
+                    </div>
+                </div>
+
+                <div id="feedback-caixa" class="feedback oculto">
+                    <h3 id="feedback-titulo"></h3>
+                    <p id="feedback-texto"></p>
+                    <button id="btn-proximo" class="btn btn-primario" onclick="proximaRodada()">Avançar</button>
+                </div>
+            </div>
+
+            
+            <div id="area-resultado" class="quiz-container oculto" style="text-align: center;">
+                <h2>Análise Concluída</h2>
+                <p class="pontuacao-texto">Índice de Precisão: <strong id="pontuacao-final">0</strong> / 10</p>
+                <p id="mensagem-resultado" style="margin: 20px 0; font-size: 1.1rem; color: var(--cor-texto);"></p>
+                <button class="btn btn-primario" onclick="window.location.reload()">Refazer Teste</button>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
