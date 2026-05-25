@@ -116,4 +116,48 @@ nav {
 .imagem-label { margin-top: 15px; font-weight: bold; color: var(--cor-primaria); }
 
 .feedback { margin-top: 30px; padding: 25px; border-radius: 8px; }
-.feedback.acerto { background
+.feedback.acerto { background-color: #eaf6f4; border: 2px solid var(--cor-sucesso); color: var(--cor-sucesso); }
+.feedback.erro { background-color: #fcebeb; border: 2px solid var(--cor-alerta); color: var(--cor-alerta); }
+.pontuacao-texto { font-size: 1.8rem; color: var(--navy); }
+#pontuacao-final { color: var(--cor-secundaria); font-size: 2.8rem; font-weight: bold; }
+
+.btn { 
+    display: inline-block; padding: 12px 30px; border-radius: 5px; 
+    font-weight: bold; cursor: pointer; border: none; font-size: 1rem; 
+    transition: 0.3s; text-decoration: none;
+}
+.btn-primario { background-color: var(--cor-secundaria); color: #ffffff; margin-top: 15px; }
+.btn-primario:hover { background-color: var(--navy); color: #ffffff; }
+.oculto { display: none !important; }
+
+footer { background-color: var(--cor-primaria); color: var(--sky-blue-light); text-align: center; padding: 30px; margin-top: 50px; }
+
+/* ======================================================
+   OTIMIZAÇÃO PARA DISPOSITIVOS MÓVEIS (SMARTPHONES)
+   ====================================================== */
+@media (max-width: 768px) {
+    /* Navegação */
+    body { padding-top: 120px; }
+    .nav-container { flex-direction: column; gap: 10px; padding: 15px 0 10px 0; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .nav-links a { padding: 6px 12px; font-size: 0.9rem; text-align: center; }
+
+    /* Cabeçalho */
+    .hero { padding: 60px 0; }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+
+    /* Espaçamentos e Grids */
+    .secao { padding: 40px 0; }
+    .titulo-secao { font-size: 1.8rem; margin-bottom: 25px; }
+    .grid-3, .grid-2, .glossario-grid { grid-template-columns: 1fr; }
+
+    /* SOS Box */
+    .sos-box { flex-direction: column; text-align: center; padding: 25px; }
+    .sos-icone { font-size: 3.5rem; margin-bottom: 0; }
+
+    /* ==========================================
+       QUIZ MOBILE: IMAGENS LADO A LADO (GRID)
+       ========================================== */
+    .quiz-container { 
+        padding
