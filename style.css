@@ -1,4 +1,4 @@
-    /* ======================================================
+/* ======================================================
    PALETA DE CORES (BLUE TECH / CIBERSEGURANÇA)
    ====================================================== */
 :root {
@@ -35,7 +35,6 @@ body {
 .secao { padding: 60px 0; }
 .bg-suave { background-color: var(--cor-fundo-alt); border-top: 1px solid var(--sky-blue-light); border-bottom: 1px solid var(--sky-blue-light); }
 
-/* Ajustei o minmax para 280px, assim não quebra em celulares estreitos */
 .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 
@@ -117,55 +116,4 @@ nav {
 .imagem-label { margin-top: 15px; font-weight: bold; color: var(--cor-primaria); }
 
 .feedback { margin-top: 30px; padding: 25px; border-radius: 8px; }
-.feedback.acerto { background-color: #eaf6f4; border: 2px solid var(--cor-sucesso); color: var(--cor-sucesso); }
-.feedback.erro { background-color: #fcebeb; border: 2px solid var(--cor-alerta); color: var(--cor-alerta); }
-.pontuacao-texto { font-size: 1.8rem; color: var(--navy); }
-#pontuacao-final { color: var(--cor-secundaria); font-size: 2.8rem; font-weight: bold; }
-
-.btn { 
-    display: inline-block; padding: 12px 30px; border-radius: 5px; 
-    font-weight: bold; cursor: pointer; border: none; font-size: 1rem; 
-    transition: 0.3s; text-decoration: none;
-}
-.btn-primario { background-color: var(--cor-secundaria); color: #ffffff; margin-top: 15px; }
-.btn-primario:hover { background-color: var(--navy); color: #ffffff; }
-.oculto { display: none !important; }
-
-footer { background-color: var(--cor-primaria); color: var(--sky-blue-light); text-align: center; padding: 30px; margin-top: 50px; }
-
-/* ======================================================
-   OTIMIZAÇÃO PARA DISPOSITIVOS MÓVEIS (SMARTPHONES E TABLETS)
-   ====================================================== */
-@media (max-width: 768px) {
-    /* Menu de Navegação - Empilhando e quebrando linha */
-    body { padding-top: 120px; } /* Dá mais espaço para o menu que ficou mais alto */
-    .nav-container { flex-direction: column; gap: 10px; padding: 15px 0 10px 0; }
-    .nav-links { flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .nav-links a { padding: 6px 12px; font-size: 0.9rem; text-align: center; }
-
-    /* Textos do Cabeçalho */
-    .hero { padding: 60px 0; }
-    .hero h1 { font-size: 2rem; }
-    .hero p { font-size: 1rem; }
-
-    /* Espaçamentos Gerais */
-    .secao { padding: 40px 0; }
-    .titulo-secao { font-size: 1.8rem; margin-bottom: 25px; }
-
-    /* Garantindo que grids de 3 ou 2 colunas virem 1 coluna no celular */
-    .grid-3, .grid-2, .glossario-grid { grid-template-columns: 1fr; }
-
-    /* Caixa SOS de Emergência */
-    .sos-box { flex-direction: column; text-align: center; padding: 25px; }
-    .sos-icone { font-size: 3.5rem; margin-bottom: 0; }
-
-    /* Imagens do Quiz - Empilhando no Celular */
-    .quiz-container { padding: 25px 15px; }
-    .grid-imagens { flex-direction: column; gap: 20px; }
-    .imagem-opcao { width: 100%; min-width: 100%; }
-    .imagem-opcao img { height: 280px; } /* Deixa a imagem ligeiramente menor para caber na tela */
-    
-    /* Textos de Resultado e Feedback */
-    .feedback { padding: 15px; text-align: center; }
-    .pontuacao-texto { font-size: 1.5rem; }
-}
+.feedback.acerto { background
