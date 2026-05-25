@@ -1,24 +1,22 @@
-
+    /* ======================================================
+   PALETA DE CORES (BLUE TECH / CIBERSEGURANÇA)
+   ====================================================== */
 :root {
-    
     --sky-blue-light: #78c0e0;
     --blue-bell: #449dd1;
     --persian-blue: #192bc2;
     --navy: #150578;
     --deep-twilight: #0e0e52;
 
-    --cor-primaria: var(--deep-twilight);    
-    --cor-secundaria: var(--persian-blue);   
-    --cor-destaque: var(--blue-bell);        
-    --cor-texto: var(--deep-twilight);     
-    --cor-fundo: #ffffff;                 
-    --cor-fundo-alt: #f2f8fc;                
-    
-    
-    --cor-sucesso: #2a9d8f;                  
-    --cor-alerta: #e63946;                   
+    --cor-primaria: var(--deep-twilight);
+    --cor-secundaria: var(--persian-blue);
+    --cor-destaque: var(--blue-bell);
+    --cor-texto: var(--deep-twilight);
+    --cor-fundo: #ffffff;
+    --cor-fundo-alt: #f2f8fc;
+    --cor-sucesso: #2a9d8f;
+    --cor-alerta: #e63946;
 }
-
 
 * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
@@ -27,64 +25,61 @@ body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.6;
-    padding-top: 70px; 
+    padding-top: 70px;
 }
 
+/* ======================================================
+   ESTRUTURAS GERAIS E GRIDS (MOBILE FIRST)
+   ====================================================== */
 .container { width: 90%; max-width: 1100px; margin: 0 auto; }
 .secao { padding: 60px 0; }
 .bg-suave { background-color: var(--cor-fundo-alt); border-top: 1px solid var(--sky-blue-light); border-bottom: 1px solid var(--sky-blue-light); }
 
+/* Ajustei o minmax para 280px, assim não quebra em celulares estreitos */
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 
+/* ======================================================
+   NAVEGAÇÃO
+   ====================================================== */
 nav {
     background-color: var(--cor-primaria);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    position: fixed; width: 100%; top: 0; z-index: 1000;
     box-shadow: 0 4px 10px rgba(14, 14, 82, 0.3);
     border-bottom: 3px solid var(--sky-blue-light);
 }
-.nav-container {
-    display: flex; justify-content: space-between; align-items: center;
-    width: 90%; max-width: 1100px; margin: 0 auto; padding: 15px 0;
-}
-.logo { color: #ffffff; font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+.logo { color: #ffffff; font-weight: 800; font-size: 1.5rem; }
 .nav-links { display: flex; list-style: none; gap: 20px; }
-.nav-links a { 
-    color: #ffffff; text-decoration: none; font-weight: 600; 
-    padding: 8px 15px; border-radius: 5px; transition: 0.3s; 
-}
-.nav-links a:hover, .nav-links a.active { 
-    background-color: var(--cor-secundaria); 
-    color: #ffffff; 
-}
+.nav-links a { color: #ffffff; text-decoration: none; font-weight: 600; padding: 8px 15px; border-radius: 5px; transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { background-color: var(--cor-secundaria); }
 
-
+/* ======================================================
+   HERO E TÍTULOS
+   ====================================================== */
 .hero {
     background: linear-gradient(135deg, var(--deep-twilight), var(--navy));
-    color: #ffffff; 
-    padding: 100px 0; text-align: center;
+    color: #ffffff; padding: 100px 0; text-align: center;
     border-bottom: 5px solid var(--sky-blue-light);
 }
-.hero h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 800; letter-spacing: -1px; }
+.hero h1 { font-size: 3rem; margin-bottom: 20px; font-weight: 800; }
 .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; color: var(--sky-blue-light); }
 
-
 .titulo-secao { text-align: center; color: var(--cor-primaria); font-size: 2.2rem; margin-bottom: 40px; font-weight: 800; }
-.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; }
+.subtitulo { text-align: center; font-size: 1.1rem; margin-bottom: 40px; }
 
+/* ======================================================
+   CARTÕES E LISTAS
+   ====================================================== */
 .card {
-    background-color: var(--cor-fundo); 
-    padding: 30px; border-radius: 8px;
+    background-color: var(--cor-fundo); padding: 30px; border-radius: 8px;
     box-shadow: 0 4px 15px rgba(21, 5, 120, 0.08);
     border-top: 4px solid var(--cor-secundaria); transition: 0.3s;
 }
-.card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(21, 5, 120, 0.15); }
+.card:hover { transform: translateY(-5px); }
 .icone { font-size: 2.5rem; margin-bottom: 15px; }
 .card h3 { color: var(--navy); margin-bottom: 10px; font-size: 1.3rem; }
-.card-alerta { border-top-color: var(--cor-destaque); } 
-
+.card-alerta { border-top-color: var(--cor-alerta); }
 
 .glossario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 .glossario-item {
@@ -93,32 +88,27 @@ nav {
     box-shadow: 0 2px 10px rgba(21, 5, 120, 0.05);
 }
 .glossario-item h4 { color: var(--navy); font-size: 1.1rem; margin-bottom: 8px; }
-.glossario-item p { font-size: 0.95rem; color: var(--cor-texto); }
 
 .checklist-box { background-color: var(--cor-fundo); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(21, 5, 120, 0.08); }
 .checklist-lista { list-style: none; }
 .checklist-lista li { padding: 15px 0; border-bottom: 1px solid var(--sky-blue-light); display: flex; align-items: flex-start; gap: 15px; }
 .checklist-lista li:last-child { border-bottom: none; }
 .checklist-icone { color: var(--cor-secundaria); font-size: 1.5rem; font-weight: bold; }
-.checklist-texto strong { color: var(--navy); display: block; font-size: 1.1rem; margin-bottom: 4px; }
-
 
 .sos-box {
-    background-color: var(--cor-fundo-alt); 
-    border: 3px solid var(--cor-secundaria);
-    padding: 40px; border-radius: 8px; margin-top: 40px;
-    display: flex; gap: 30px; align-items: center;
-    box-shadow: 0 5px 20px rgba(25, 43, 194, 0.15);
+    background-color: var(--cor-fundo-alt); border: 3px solid var(--cor-alerta);
+    padding: 40px; border-radius: 8px; display: flex; gap: 30px; align-items: center;
 }
 .sos-icone { font-size: 4rem; }
 .sos-texto h3 { color: var(--navy); margin-bottom: 15px; font-size: 1.5rem; }
-.sos-texto li { margin-bottom: 10px; color: var(--cor-texto); font-weight: 500; }
 
-
-.quiz-container { background: var(--cor-fundo); padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(21, 5, 120, 0.08); margin-top: 20px; }
+/* ======================================================
+   QUIZ E BOTÕES
+   ====================================================== */
+.quiz-container { background: var(--cor-fundo); padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
 .progresso-texto { font-weight: bold; color: var(--cor-secundaria); margin-bottom: 20px; text-align: center; font-size: 1.2rem; }
 .grid-imagens { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
-.imagem-opcao { flex: 1; min-width: 280px; max-width: 450px; cursor: pointer; text-align: center; }
+.imagem-opcao { flex: 1; min-width: 250px; cursor: pointer; text-align: center; }
 .imagem-opcao img {
     width: 100%; height: 350px; object-fit: cover; border-radius: 8px;
     border: 5px solid var(--sky-blue-light); transition: 0.3s;
@@ -132,7 +122,6 @@ nav {
 .pontuacao-texto { font-size: 1.8rem; color: var(--navy); }
 #pontuacao-final { color: var(--cor-secundaria); font-size: 2.8rem; font-weight: bold; }
 
-
 .btn { 
     display: inline-block; padding: 12px 30px; border-radius: 5px; 
     font-weight: bold; cursor: pointer; border: none; font-size: 1rem; 
@@ -142,11 +131,41 @@ nav {
 .btn-primario:hover { background-color: var(--navy); color: #ffffff; }
 .oculto { display: none !important; }
 
-footer { 
-    background-color: var(--cor-primaria); 
-    color: var(--sky-blue-light); 
-    text-align: center; 
-    padding: 30px 20px; 
-    margin-top: 50px; 
-    border-top: 4px solid var(--cor-secundaria);
+footer { background-color: var(--cor-primaria); color: var(--sky-blue-light); text-align: center; padding: 30px; margin-top: 50px; }
+
+/* ======================================================
+   OTIMIZAÇÃO PARA DISPOSITIVOS MÓVEIS (SMARTPHONES E TABLETS)
+   ====================================================== */
+@media (max-width: 768px) {
+    /* Menu de Navegação - Empilhando e quebrando linha */
+    body { padding-top: 120px; } /* Dá mais espaço para o menu que ficou mais alto */
+    .nav-container { flex-direction: column; gap: 10px; padding: 15px 0 10px 0; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .nav-links a { padding: 6px 12px; font-size: 0.9rem; text-align: center; }
+
+    /* Textos do Cabeçalho */
+    .hero { padding: 60px 0; }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+
+    /* Espaçamentos Gerais */
+    .secao { padding: 40px 0; }
+    .titulo-secao { font-size: 1.8rem; margin-bottom: 25px; }
+
+    /* Garantindo que grids de 3 ou 2 colunas virem 1 coluna no celular */
+    .grid-3, .grid-2, .glossario-grid { grid-template-columns: 1fr; }
+
+    /* Caixa SOS de Emergência */
+    .sos-box { flex-direction: column; text-align: center; padding: 25px; }
+    .sos-icone { font-size: 3.5rem; margin-bottom: 0; }
+
+    /* Imagens do Quiz - Empilhando no Celular */
+    .quiz-container { padding: 25px 15px; }
+    .grid-imagens { flex-direction: column; gap: 20px; }
+    .imagem-opcao { width: 100%; min-width: 100%; }
+    .imagem-opcao img { height: 280px; } /* Deixa a imagem ligeiramente menor para caber na tela */
+    
+    /* Textos de Resultado e Feedback */
+    .feedback { padding: 15px; text-align: center; }
+    .pontuacao-texto { font-size: 1.5rem; }
 }
